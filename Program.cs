@@ -50,11 +50,13 @@ namespace Exercise2
         }
         public void q_sort(int low, int high)
         {
-            int pivot, i, j, k;
+            int pivot, i, rp, k;
             if (low >= high)
             {
                 int mid = (low + high) / 2;
                 return;
+
+
             }
         }
     }
