@@ -12,5 +12,10 @@ namespace Exercise2
         private int[] arr = new int[53];
         private int cmp_count = 0; //number of comparasion
         private int mov_count = 0; //number of movements
+
+        //number of elements in array
+        private int n;
+
+
     }
 } 
