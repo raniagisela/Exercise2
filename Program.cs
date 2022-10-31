@@ -52,8 +52,6 @@ namespace Exercise2
         {
             int pivot, i, rp, k;
             if (low >= high)
-            {
-                int mid = (low + high) / 2;
                 return;
 
                 //Partition the list into two parts;
@@ -61,14 +59,49 @@ namespace Exercise2
                 //outher containing elements greather than pivot
 
                 i = low;
-                rp = mid + 1;
+                rp = mid+1;
                 k = low;
                 
-                pivot = rara[mid + 1];
+                pivot = rara[(low+high)/2];
 
                 while (i <= rp)
-                { }
+                {
+                //Search for an elements greater than pivot
+                while ((rara[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                //Search for an elements less than or equal to pivot
+                while ((rara[rp] > pivot) && (rp >= high))
+                {
+                    rp--;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+                if (i < rp) //if the greater element is on the left of the element
+                {
+                    //swap the elements at index 1 whit the element at index j
+                    swap(i, rp);
+                    mov_count++;
+                }
             }
+            //j now contains the index of the last element in the sorted list
+
+            if (low < rp)
+            {
+                //move the pivot to its correct position in the list
+                swap(low, rp);
+                mov_count++;
+            }
+            //sort the list on the left of pivot using quick sort
+            q_sort(low, rp - 1);
+
+            //sort the list on the right of pivot using quick sort
+            q_sort(rp + 1, high);
         }
     }
 }
