@@ -15,7 +15,22 @@ namespace Exercise2
 
         //number of elements in array
         private int n;
+        void read()
+        {
+            while (true)
+            {
+                Console.Write("Enter the number of elements in the array :");
+                string s = Console.ReadLine();
+                n = Int32.Parse(s);
+                if (n <= 53)
+                    break;
+                else
+                    Console.WriteLine("\nArray can have maximum 53 elements \n");
+            }
+            Console.WriteLine("\n=======================");
+            Console.WriteLine("Enter Array Elements");
+            Console.WriteLine("\n=======================");
 
-
+        }
     }
-} 
+}
