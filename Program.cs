@@ -103,5 +103,18 @@ namespace Exercise2
             //sort the list on the right of pivot using quick sort
             q_sort(rp + 1, high);
         }
+        void display()
+        {
+            Console.WriteLine("\n---------------------");
+            Console.WriteLine(" Sorted array elements ");
+            Console.WriteLine("\n---------------------");
+
+            for (int rp = 0; rp < n; rp++)
+            {
+                Console.WriteLine(rara[rp]);
+            }
+            Console.WriteLine("\nNumber of comparisons: " + cmp_count);
+            Console.WriteLine("\nNumber of data movemenets: " + mov_count);
+        }
     }
 }
