@@ -56,7 +56,18 @@ namespace Exercise2
                 int mid = (low + high) / 2;
                 return;
 
+                //Partition the list into two parts;
+                //one containing elements less that or equal to pivot
+                //outher containing elements greather than pivot
 
+                i = low;
+                rp = mid + 1;
+                k = low;
+                
+                pivot = rara[mid + 1];
+
+                while (i <= rp)
+                { }
             }
         }
     }
