@@ -48,5 +48,14 @@ namespace Exercise2
             rara[x] = rara[y];
             rara[y] = temp;
         }
+        public void q_sort(int low, int high)
+        {
+            int pivot, i, j, k;
+            if (low >= high)
+            {
+                int mid = (low + high) / 2;
+                return;
+            }
+        }
     }
 }
